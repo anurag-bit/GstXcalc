@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="16dp"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/cost_of_service"
+        android:layout_width="231dp"
+        android:layout_height="51dp"
+        android:autofillHints="none"
+        android:hint="@string/cost_of_service"
+        android:inputType="numberDecimal"
+        android:textColorHint="#757575"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.005"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <TextView
+        android:id="@+id/service_quality"
+        android:layout_width="224dp"
+        android:layout_height="34dp"
+        android:text="@string/how_was_the_service"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.173" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_buttons"
+        android:layout_width="180dp"
+        android:layout_height="199dp"
+        android:orientation="vertical"
+        android:checkedButton="@id/quality_choice_good"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/service_quality"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <RadioButton
+        android:id="@+id/quality_choice_amazing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@string/amazing"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBaseline_toTopOf="@string/how_was_the_service"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/service_quality"
+        app:layout_constraintVertical_bias="0.061" />
+
+    <RadioButton
+        android:id="@+id/quality_choice_good"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@string/good"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBaseline_toTopOf="@string/how_was_the_service"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/service_quality"
+        app:layout_constraintVertical_bias="0.179" />
+
+    <RadioButton
+        android:id="@+id/quality_choice_okay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@string/okay"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBaseline_toTopOf="@string/how_was_the_service"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/service_quality"
+        app:layout_constraintVertical_bias="0.303" />
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/approxi_switch"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.917"
+        app:layout_constraintStart_toEndOf="@+id/round_off"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.589"/>
+
+    <TextView
+        android:id="@+id/round_off"
+        android:layout_width="154dp"
+        android:layout_height="26dp"
+        android:text="@string/Round_tip"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.009"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio_group_buttons"
+        app:layout_constraintVertical_bias="0.106" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Calc_button"
+        android:layout_width="254dp"
+        android:layout_height="52dp"
+        android:backgroundTint="@color/purple_700"
+        android:text="@string/calculate_tip"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/approxi_switch"
+        app:layout_constraintVertical_bias="0.14" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
