@@ -125,5 +125,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/approxi_switch"
         app:layout_constraintVertical_bias="0.14" />
+    <TextView
+        android:id="@+id/tip_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Calc_button"
+     tools:text="Tip Amount: $10" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
