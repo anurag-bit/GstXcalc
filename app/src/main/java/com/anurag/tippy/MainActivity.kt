@@ -4,12 +4,11 @@ package com.anurag.tippy
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.anurag.tippy.databinding.ActivityMainBinding
-import java.sql.SQLData
 import java.text.NumberFormat
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,10 +17,10 @@ class MainActivity : AppCompatActivity() {
         }
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.CalcButton.setOnClickListener{Calculat_tip()  }
+        binding.CalcButton.setOnClickListener{calculatetip()  }
     }
 
-    fun Calculat_tip() {
+    private fun calculatetip() {
         val stringInTextField = binding.costOfService.text.toString()
         val cost = stringInTextField.toDouble()
         val tipPercentage = when (binding.radioGroupButtons.checkedRadioButtonId) {
