@@ -18,10 +18,10 @@ class MainActivity : AppCompatActivity() {
         }
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.CalcButton.setOnClickListener{ sData() }
+        binding.CalcButton.setOnClickListener{Calculat_tip()  }
     }
 
-    fun sData() {
+    fun Calculat_tip() {
         val stringInTextField = binding.costOfService.text.toString()
         val cost = stringInTextField.toDouble()
         val tipPercentage = when (binding.radioGroupButtons.checkedRadioButtonId) {
