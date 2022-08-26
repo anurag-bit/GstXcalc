@@ -3,101 +3,107 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:padding="16dp"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/cost_of_service"
-        android:layout_width="231dp"
-        android:layout_height="51dp"
-        android:autofillHints="none"
-        android:hint="@string/cost_of_service"
-        android:inputType="numberDecimal"
-        android:textColorHint="#757575"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textField"
+        android:layout_width="244dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="24dp"
+        android:hint="@string/none"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.005"
+        app:layout_constraintHorizontal_bias="0.455"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.036" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cost_of_service"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="none"
+            android:hint="@string/cost_of_service"
+            android:inputType="numberDecimal"
+            android:textColorHint="#757575"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.005"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.036" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/service_quality"
-        android:layout_width="224dp"
-        android:layout_height="34dp"
+        android:layout_width="232dp"
+        android:layout_height="38dp"
         android:text="@string/how_was_the_service"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintHorizontal_bias="0.435"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.173" />
+        app:layout_constraintVertical_bias="0.184" />
 
     <RadioGroup
         android:id="@+id/radio_group_buttons"
-        android:layout_width="180dp"
-        android:layout_height="199dp"
-        android:orientation="vertical"
+        android:layout_width="291dp"
+        android:layout_height="180dp"
         android:checkedButton="@id/quality_choice_good"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintHorizontal_bias="0.008"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/service_quality"
-        app:layout_constraintVertical_bias="0.057" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.343">
 
-    <RadioButton
-        android:id="@+id/quality_choice_amazing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="@string/amazing"
-        app:layout_constrainedHeight="true"
-        app:layout_constraintBaseline_toTopOf="@string/how_was_the_service"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/service_quality"
-        app:layout_constraintVertical_bias="0.061" />
+        <RadioButton
+            android:id="@+id/quality_choice_okay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/okay"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <RadioButton
-        android:id="@+id/quality_choice_good"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="@string/good"
-        app:layout_constrainedHeight="true"
-        app:layout_constraintBaseline_toTopOf="@string/how_was_the_service"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/service_quality"
-        app:layout_constraintVertical_bias="0.179" />
+        <RadioButton
+            android:id="@+id/quality_choice_good"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="36dp"
+            android:text="@string/good"
+           />
 
-    <RadioButton
-        android:id="@+id/quality_choice_okay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="@string/okay"
-        app:layout_constrainedHeight="true"
-        app:layout_constraintBaseline_toTopOf="@string/how_was_the_service"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/service_quality"
-        app:layout_constraintVertical_bias="0.303" />
+        <RadioButton
+            android:id="@+id/quality_choice_amazing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:minHeight="48dp"
+            android:text="@string/amazing"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </RadioGroup>
+
     <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/approxi_switch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/approxi_switch"
         android:minWidth="48dp"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.917"
+        app:layout_constraintHorizontal_bias="0.881"
         app:layout_constraintStart_toEndOf="@+id/round_off"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.589"/>
+        app:layout_constraintVertical_bias="0.626" />
 
     <TextView
         android:id="@+id/round_off"
@@ -107,10 +113,10 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.009"
+        app:layout_constraintHorizontal_bias="0.229"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radio_group_buttons"
-        app:layout_constraintVertical_bias="0.106" />
+        app:layout_constraintVertical_bias="0.241" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Calc_button"
@@ -121,16 +127,61 @@
         android:textColor="@color/primaryTextColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintHorizontal_bias="0.343"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/approxi_switch"
-        app:layout_constraintVertical_bias="0.14" />
+        app:layout_constraintVertical_bias="0.13" />
+
     <TextView
         android:id="@+id/tip_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="140dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Calc_button"
-     tools:text="Tip Amount: $10" />
+        tools:text="Tip Amount: $10" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="59dp"
+        android:layout_height="46dp"
+        android:contentDescription="@string/icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.179"
+        app:srcCompat="@drawable/ic_baseline_room_service_24" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:contentDescription="@string/icon"
+        android:layout_width="58dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.002"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.048"
+        app:srcCompat="@drawable/ic_baseline_store_24" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:contentDescription="@string/icon"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/round_off"
+        app:layout_constraintHorizontal_bias="0.074"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.586"
+        app:srcCompat="@drawable/ic_baseline_call_made_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
