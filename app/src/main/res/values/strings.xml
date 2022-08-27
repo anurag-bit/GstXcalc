@@ -1,14 +1,14 @@
 <resources>
-    <string name="app_name">Tippy</string>
+    <string name="app_name">TaxCalc</string>
     <string name="cost_of_service">Enter Cost of Service</string>
-    <string name="how_was_the_service">How was the Service?</string>
-    <string name="amazing">Amazing(20%)</string>
-    <string name="good">Good(18%)</string>
-    <string name="okay">Okay(15%)</string>
-    <string name="Round_tip">Round the Tip?</string>
+    <string name="how_was_the_service">Gst fraction?</string>
+    <string name="amazing">Leisure(28%)</string>
+    <string name="good">Food &amp; Electronics (18%)</string>
+    <string name="okay">Clothing &amp; wearables(12%)</string>
+    <string name="Round_tip">Round the Amount?</string>
     <string name="calculate_tip">Calculate Tip</string>
     <string name="tip_amount">Tip Amount: %s</string>
     <string name="none" />
     <string name="icon">icon</string>
-    <string name="credit">Created by, Anurag Kumar singh</string>
+    <string name="credit">© @anurag-bit </string>
 </resources>
