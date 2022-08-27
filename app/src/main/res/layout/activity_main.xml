@@ -38,6 +38,7 @@
 
     <TextView
         android:id="@+id/service_quality"
+        style="@style/Widget.Tippy.TextView."
         android:layout_width="232dp"
         android:layout_height="38dp"
         android:text="@string/how_was_the_service"
@@ -94,16 +95,16 @@
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/approxi_switch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="48dp"
+        android:layout_height="49dp"
         android:minWidth="48dp"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintHorizontal_bias="0.887"
         app:layout_constraintStart_toEndOf="@+id/round_off"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.626" />
+        app:layout_constraintVertical_bias="0.64" />
 
     <TextView
         android:id="@+id/round_off"
@@ -127,17 +128,17 @@
         android:textColor="@color/primaryTextColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.343"
+        app:layout_constraintHorizontal_bias="0.433"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/approxi_switch"
-        app:layout_constraintVertical_bias="0.13" />
+        app:layout_constraintVertical_bias="0.12" />
 
     <TextView
         android:id="@+id/tip_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="140dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="112dp"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -183,5 +184,19 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:layout_constraintVertical_bias="0.586"
         app:srcCompat="@drawable/ic_baseline_call_made_24" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="245dp"
+        android:layout_height="56dp"
+        android:fontFamily="cursive"
+        android:text="@string/credit"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tip_result" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
